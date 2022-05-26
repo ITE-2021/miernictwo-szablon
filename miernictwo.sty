@@ -1,0 +1,46 @@
+\usepackage{polski}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{kvoptions}
+\usepackage{ziffer}
+\usepackage{pgfplots,pgfplotstable}
+\pgfplotsset{/pgf/number format/use comma}
+\pgfplotsset{compat=1.18}
+\def\dotfill#1{\cleaders\hbox to #1{.}\hfill}
+\newcommand\dotline[2][.5em]{\leavevmode\hbox to #2{\dotfill{#1}\hfil}}
+
+\newcommand{\miernictwoStronaTytulowa}[8]{
+\noindent
+\thispagestyle{empty}
+\newgeometry{top=2cm,left=2cm,bottom=2.5cm,right=2cm}
+\begin{table}[H]
+\renewcommand{\arraystretch}{5}
+    \centering
+\begin{tabular}{|p{4.87cm}|p{6.48cm}|p{3.31cm}|}
+\hline
+\centering {\Large{Termin zajęć}} #1 & \multicolumn{2}{|c|}{\Huge{Miernictwo II} \adjustbox{valign=c}{\includegraphics[scale=1]{Logo.png}}} \\\hline
+\multicolumn{2}{|l|}{Osoby wykonujące ćwiczenie: #2} & Grupa nr: #6\\\hline
+\multicolumn{2}{|l|}{Tytuł ćwiczenia: #3} & Ćwiczenie nr: #7\\\hline
+Data wykonania ćwiczenia & #4 & \multirow{2}{*}{Ocena: #8} \\\cline{1-2}
+Data oddania ćwiczenia & #5 & \\\hline
+\end{tabular}
+\end{table}
+\vfill
+\noindent
+Oświadczam, że zapoznałem/łam się z niniejszym sprawozdaniem i uważam je za poprawnie wykonane:
+\vfill
+\noindent
+\dotline[4pt]{0.33\textwidth} \hfill \dotline[4pt]{0.33\textwidth}
+\vfill
+\noindent
+Oświadczam/y, iż poniższe sprawozdanie zostało wykonane przeze mnie/nas samodzielnie:
+\vfill
+\noindent
+\dotline[4pt]{0.33\textwidth} \hfill \dotline[4pt]{0.33\textwidth}
+\vfill
+\restoregeometry
+\newpage
+}
